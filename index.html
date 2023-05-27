@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | IP Address Tracker</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Leaflet css -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <!-- leaflet js -->
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <header>
+      <article>
+        <h1 id="title">IP Address Tracker</h1>
+        <form action="">
+          <input
+            placeholder="Search for any IP address or domain"
+            form="ip"
+            id="ip-input"
+            type="text"
+          />
+          <button id="btn" type="submit">
+            <img src="./images/icon-arrow.svg" alt="" />
+          </button>
+        </form>
+      </article>
+      <div class="output-container">
+        <article class="output-details">
+          <div class="col">
+            <p class="label">ip address</p>
+            <h2 id="ip-output" class="ip-details">----</h2>
+          </div>
+          <div class="col">
+            <p class="label">location</p>
+            <h2 id="ip-location" class="ip-details">----</h2>
+          </div>
+          <div class="col">
+            <p class="label">timezone</p>
+            <h2 id="timezome" class="ip-details">----</h2>
+          </div>
+          <div class="col">
+            <p class="label">isp</p>
+            <h2 id="isp" class="ip-details">----</h2>
+          </div>
+        </article>
+      </div>
+    </header>
+    <main>
+      
+      <article id="map-container"></article>
+    </main>
+  </body>
+</html>

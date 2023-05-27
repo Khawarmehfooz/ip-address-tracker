@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+:root {
+  --very-dark-gray: hsl(0, 0%, 17%);
+  --dark-gray: hsl(0, 0%, 59%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Rubik", sans-serif;
+}
+/* Header*/
+header {
+  background-image: url(./images/pattern-bg-desktop.png);
+  height: 280px;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  position: relative;
+}
+header article {
+  width: 35rem;
+  margin-inline: auto;
+}
+#title {
+  padding-top: 30px;
+  color: white;
+  font-weight: 700;
+  font-size: 32px;
+  text-align: center;
+}
+main {
+  position: absolute;
+  width: 100%;
+}
+form {
+  display: flex;
+  margin-top: 30px;
+}
+#ip-input {
+  width: 100%;
+  font-size: 18px;
+  padding: 10px 20px;
+  outline: transparent;
+  border: none;
+  border-radius: 10px 0 0 10px;
+}
+.ip-details::placeholder {
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+}
+#btn {
+  background-color: black;
+  outline: transparent;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  padding: 20px 30px;
+}
+#btn:hover {
+  background-color: var(--very-dark-gray);
+  cursor: pointer;
+}
+/* Output details */
+.output-container {
+  position: relative;
+  width: 100%;
+}
+.output-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70rem;
+  background-color: white;
+  position: relative;
+  z-index: 4;
+  top: 60px;
+  margin-inline: auto;
+  padding: 40px 10px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 5px var(--dark-gray);
+}
+.col {
+  padding: 0 30px;
+  border-left: 1px solid var(--dark-gray);
+}
+.col:first-child {
+  border-left: none;
+}
+.label {
+  text-transform: uppercase;
+  color: var(--dark-gray);
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  font-weight: 600;
+}
+.ip-details {
+  color: var(--very-dark-gray);
+  word-wrap: break-word;
+  font-weight: 600;
+}
+#map-container {
+  position: absolute;
+  height: calc(100vh - 280px);
+  width: 100%;
+  z-index: -1;
+}
+@media only screen and (max-width: 768px) {
+  header article {
+    width: 100%;
+    padding: 0 20px;
+  }
+  #ip-input::placeholder {
+    font-size: 13px;
+    font-weight: 400;
+  }
+  .output-container {
+    padding: 20px;
+  }
+  .output-details {
+    top: 10px;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .col {
+    border-left: none;
+    text-align: center;
+  }
+}
